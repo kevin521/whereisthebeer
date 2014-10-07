@@ -15,20 +15,31 @@
     <script type="text/javascript" src="javascript.js"></script>
   </head>
   <body>
-        
-
-  <div id="info">
-    <p id="inputArea">BEERS BREWS BABES</p>
-    <button onclick="getLocations()" id = "barload" style="display:none;">Load Data</button>
-    <div id="location_history"></div>
-    <footer><BR>Made by Kevin Chen<br>(some credz to zac lovoy)<footer>
-
-  </div>
-
-  <div id="map-canvas">
-  </div>
+      
 
 
 
-    </body>
+  <div data-role="page">
+
+    <div data-role="header">
+      <h1>Bar Finder</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div id="info">
+        <p id="inputArea">BEERS BREWS BABES</p>
+        <button onclick="getLocations()" id = "barload" style="display:none;">Load Data</button>
+        <div id="location_history"></div>
+      </div>
+        <div id="map-canvas">
+    </div><!-- /content -->
+
+    <div data-role="footer">
+      <h4>Made by Kevin Chen<br>(some credz to zac lovoy)</h4>
+    </div><!-- /footer -->
+
+  </div><!-- /page -->
+
+
+  </body>
 </html>
