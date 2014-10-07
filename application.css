@@ -1,0 +1,13 @@
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+#info {
+   width: 30%;
+   float: left;
+   padding-left: 10px;
+}
+
+#map-canvas {
+   height: 100%;
+   width: 65%;
+   float: right;
+}
