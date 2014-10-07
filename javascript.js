@@ -96,7 +96,7 @@ function getLocations(lat, lon) {
       ll : lat + "," + lon,
       categoryId : "4bf58dd8d48988d116941735", // Gets bars only
       radius : "1600", // Mile radius
-      oauth_token : "DRPFAC0SDFKJONOGN5DH2N043SBIJHC53GNYVTMTJH3QN55P",
+      oauth_token : "DRPFAC0SDFKJONOGN5DH2N043SBIJHC53GNYVTMTJH3QN55P", // Token from a dummy account
       format : "json",
       callback : "displayLocations", // Pass foursquare the callback function
       v : "20140921" // Pass foursquare the callback function
