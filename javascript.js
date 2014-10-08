@@ -126,11 +126,13 @@ function displayLocations(response) {
     // Adds a bar to the list of bars
     $("#location_history").append("<li><a href=\"#\"><h2>" + p.name + "</h2>" + "<p>1 mile away</p>" + "</a></li>");
     
+    if(i == items.length-1)
+        $("#location_history").append("</ul>");
+
     // Previous code that allowed you to click on items to create markers
     // $("#location_history").append("<br><a href=\"#\" onclick=\"getMarker('" + p.name.replace(/[^A-Za-z ]/g, "") + "', " + 
     //   p.location.lat + ", " + p.location.lng + ")\">" + p.name  + " - " + p.location.address + "</a>");
   }
-  $("#location_history").append("</ul>");
 }
 
 // Creates and places the markers for the bars on the map
