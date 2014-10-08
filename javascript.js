@@ -113,8 +113,10 @@ function getLocations(lat, lon) {
 function displayLocations(response) {
   var items = response.response.venues
 
+  var html = "<ul data-role=\"listview\" data-inset=\"true\">";
+  
   // HTML to create the jQuery list view
-  $("#location_history").append("<ul data-role=\"listview\" data-inset=\"true\">");
+  //$("#location_history").append("<ul data-role=\"listview\" data-inset=\"true\">");
 
   for (var i=1;i<items.length;i++){
     var p = items[i];
@@ -124,13 +126,16 @@ function displayLocations(response) {
     getMarker(name, p.location.lat, p.location.lng, location.address)
 
     // Adds a bar to the list of bars
-    $("#location_history").append("<li><a href=\"#\"><h2>" + p.name + "</h2>" + "<p>1 mile away</p>" + "</a></li>");
+    html += "<li><a href=\"#\"><h2>" + p.name + "</h2>" + "<p>1 mile away</p>" + "</a></li>";
     
 
     // Previous code that allowed you to click on items to create markers
     // $("#location_history").append("<br><a href=\"#\" onclick=\"getMarker('" + p.name.replace(/[^A-Za-z ]/g, "") + "', " + 
     //   p.location.lat + ", " + p.location.lng + ")\">" + p.name  + " - " + p.location.address + "</a>");
   }
+  html += "</ul>";
+
+  $("#location_history").append(html);
 }
 
 // Creates and places the markers for the bars on the map
