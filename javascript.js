@@ -135,7 +135,7 @@ function displayLocations(response) {
   }
   html += "</ul>";
 
-  $("#location_history").append(html);
+  $("#location_history").html(html);
 }
 
 // Creates and places the markers for the bars on the map
