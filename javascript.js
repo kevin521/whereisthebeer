@@ -136,8 +136,9 @@ function displayLocations(response) {
   html += "</ul>";
 
   // Adds the list of bars to the html, and refreshes the listview
-  $(html).appendTo('#location_history');
-  $("#location_history").listview().listview("refresh");
+  $('#location_history').html(html);
+  $('#location_history ul').listview().listview('refresh');
+  $('#location_history ul').listview().listview('refresh');
 }
 
 // Creates and places the markers for the bars on the map
